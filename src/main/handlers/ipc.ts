@@ -53,6 +53,7 @@ export class IPCHandler {
 		this.registerHandler(new SetWorkspacePathIPC());
 
 		this.registerHandler(new StartWebServerIPC());
+		this.registerHandler(new StartHttpsWebServerIPC());
 
 		this.registerHandler(new SendWindowMessageIPC(window));
 
