@@ -683,23 +683,39 @@ export class Editor {
 
         const task = this.addTaskFeedback(0, "Running Server");
         const workspace = WorkSpace.Workspace!;
-
+/*
         await IPCTools.CallWithPromise(IPCRequests.StartGameServer, WorkSpace.DirPath!, workspace.serverPort);
 
         this.updateTaskFeedback(task, 100);
         this.closeTaskFeedback(task, 500);
-
+*/
         switch (mode) {
             case EditorPlayMode.EditorPanelBrowser:
+                await IPCTools.CallWithPromise(IPCRequests.StartGameServer, WorkSpace.DirPath!, workspace.serverPort);
+
+                this.updateTaskFeedback(task, 100);
+                this.closeTaskFeedback(task, 500);
                 this.addBuiltInPlugin("run");
                 break;
             case EditorPlayMode.IntegratedBrowser:
+                await IPCTools.CallWithPromise(IPCRequests.StartGameServer, WorkSpace.DirPath!, workspace.serverPort);
+
+                this.updateTaskFeedback(task, 100);
+                this.closeTaskFeedback(task, 500);
                 this.addWindowedPlugin("run", undefined, workspace);
                 break;
             case EditorPlayMode.ExternalBrowser:
+                await IPCTools.CallWithPromise(IPCRequests.StartGameServer, WorkSpace.DirPath!, workspace.serverPort);
+
+                this.updateTaskFeedback(task, 100);
+                this.closeTaskFeedback(task, 500);
                 shell.openExternal(`http://localhost:${workspace.serverPort}`);
                 break;
             case EditorPlayMode.IntegratedHttpsBrowser:
+                await IPCTools.CallWithPromise(IPCRequests.StartGameHttpsServer, WorkSpace.DirPath!, workspace.serverPort);
+
+                this.updateTaskFeedback(task, 100);
+                this.closeTaskFeedback(task, 500);
                 this.addWindowedPlugin("run", undefined, workspace);
                 break;
         }

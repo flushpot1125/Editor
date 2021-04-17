@@ -12,6 +12,7 @@ export enum IPCRequests {
 	SetWorkspacePath = "setworkspacepath",
 
 	StartGameServer = "startgameserver",
+	StartGameHttpsServer = "startgamehttpsserver",
 
 	SendWindowMessage = "sendwindowmessage",
 	FocusWindow = "focuswindow",
@@ -39,6 +40,7 @@ export enum IPCResponses {
 	SetWorkspacePath = "setworkspacepath",
 
 	StartGameServer = "startgameserver",
+	StartGameHttpsServer = "startgamehttpsserver",
 
 	SendWindowMessage = "sendwindowmessage",
 

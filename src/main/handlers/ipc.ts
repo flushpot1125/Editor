@@ -8,6 +8,7 @@ import { GetWorkspacePathIPC, SetWorkspacePathIPC } from "../ipc/workspace";
 import { OpenDirectoryDialogIPC, OpenFileDialogIPC, SaveFileDialogIPC } from "../ipc/dialogs";
 
 import { StartWebServerIPC } from "../ipc/webserver";
+import { StartHttpsWebServerIPC } from "../ipc/webserver";
 import { SendWindowMessageIPC } from "../ipc/window-message";
 
 import { CloseWindowIPC } from "../ipc/close-window";
