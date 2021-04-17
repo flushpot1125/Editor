@@ -82,6 +82,10 @@ export enum EditorPlayMode {
      * Opens the game in an external browser (see user's prefs).
      */
     ExternalBrowser,
+    /**
+     * Opens the game in a new window using the integrated https browser.
+     */
+    IntegratedHttpsBrowser,
 }
 
 export interface IAttachedScriptMetadata {

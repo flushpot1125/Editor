@@ -97,6 +97,7 @@ export class ToolsToolbar extends React.Component<IToolbarProps, IToolbarState> 
             case "run-integrated": this._editor.runProject(EditorPlayMode.IntegratedBrowser); break;
             case "run-my-browser": this._editor.runProject(EditorPlayMode.ExternalBrowser); break;
             case "run-editor": this._editor.runProject(EditorPlayMode.EditorPanelBrowser); break;
+            case "run-integrated-https": this._editor.runProject(EditorPlayMode.IntegratedHttpsBrowser); break;
 
             case "generate": ProjectExporter.ExportFinalScene(this._editor); break;
             case "generate-as": ProjectExporter.ExportFinalSceneAs(this._editor); break;
@@ -116,6 +117,7 @@ export class ToolsToolbar extends React.Component<IToolbarProps, IToolbarState> 
         ContextMenu.show(
             <Menu className={Classes.DARK}>
                 <MenuItem text="Run In Integrated Browser" onClick={() => this._buttonClicked("run-integrated")} />
+                <MenuItem text="Play In Integrated https Browser" onClick={() => this._buttonClicked("run-integrated-https")} />                 
                 <MenuItem text="Run In My Browser" onClick={() => this._buttonClicked("run-my-browser")} />
                 <MenuItem text="Run In Editor" onClick={() => this._buttonClicked("run-editor")} />
             </Menu>,

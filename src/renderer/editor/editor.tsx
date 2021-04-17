@@ -699,6 +699,9 @@ export class Editor {
             case EditorPlayMode.ExternalBrowser:
                 shell.openExternal(`http://localhost:${workspace.serverPort}`);
                 break;
+            case EditorPlayMode.IntegratedHttpsBrowser:
+                this.addWindowedPlugin("run", undefined, workspace);
+                break;
         }
     }
 
