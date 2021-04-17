@@ -117,7 +117,7 @@ export class ToolsToolbar extends React.Component<IToolbarProps, IToolbarState> 
         ContextMenu.show(
             <Menu className={Classes.DARK}>
                 <MenuItem text="Run In Integrated Browser" onClick={() => this._buttonClicked("run-integrated")} />
-                <MenuItem text="Play In Integrated https Browser" onClick={() => this._buttonClicked("run-integrated-https")} />                 
+                <MenuItem text="Run In Integrated https Browser" onClick={() => this._buttonClicked("run-integrated-https")} />                 
                 <MenuItem text="Run In My Browser" onClick={() => this._buttonClicked("run-my-browser")} />
                 <MenuItem text="Run In Editor" onClick={() => this._buttonClicked("run-editor")} />
             </Menu>,
